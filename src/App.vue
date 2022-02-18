@@ -1,35 +1,39 @@
 <template>
   <div id="app">
     <div class="container-fluid">
-      <video autoplay muted loop id="myVideo" >
+      
+     <!-- <video autoplay muted loop id="myVideo" >
         <source src="./assets/video.mp4" type="video/mp4">
       </video>
+      -->
       <div class="text">
         <h1 class="">I am <span>Simone</span></h1>
         <h2 class="pb-4"> <span>Full-stack</span> Developer</h2>
-        <a class="my-btn">Project</a>
+        <a class="my-btn" href="#project">Project</a>
         <a class="my-btn" id="my-btn-orange" href="Cv.html" >Cv</a>
         <a class="my-btn">About me</a>
       </div>  
       <div class="social-btn">
-        <a href="#" class="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/simone-franzoni-72850222a/" class="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
           <i class="fab fa-linkedin-in"></i>
         </a>
-        <a href="#" class="social-buttons__button social-button social-button--github" aria-label="GitHub">
+        <a href="https://github.com/SimoneFranzoni" class="social-buttons__button social-button social-button--github" aria-label="GitHub">
           <i class="fab fa-github"></i>
         </a>
-      </div>
-              
+      </div>   
     </div>
+    <Project />
   </div>  
 </template>
 
 <script>
 
+import Project from './components/Project.vue';
+
 export default {
   name: 'App',
   components: {
-    
+      Project,
   }
 }
 </script>
@@ -41,6 +45,7 @@ export default {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  background-color: #000000;
 }
 
 .container-fluid{  
