@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <header class="d-flex justify-content-center">
+      <img src="./assets/logo.jpeg" alt="">
+    </header> 
     <div class="container-fluid">
       
      <!-- <video autoplay muted loop id="myVideo" >
@@ -22,7 +25,12 @@
         </a>
       </div>   
     </div>
-    <Project />
+    <section class="container mt-5" id="project">  
+      <h1 class="orange">I miei progetti:</h1>
+      <Project titleType="Siti attivi:" /> 
+      <!--<Project titleType="Progetti Boolean:"/>
+      <Project titleType="Piccoli progetti personali:"/>-->
+    </section>
   </div>  
 </template>
 
@@ -34,6 +42,7 @@ export default {
   name: 'App',
   components: {
       Project,
+    
   }
 }
 </script>
@@ -46,6 +55,18 @@ export default {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   background-color: #000000;
+}
+
+header{
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  background-color: #ff5100ec;       
+  z-index: 2;
+
+  img{
+    height: 100%;
+  }
 }
 
 .container-fluid{  
@@ -196,6 +217,14 @@ $social-button-colors: (
 }
 //play-btn
 
+
+.orange{
+    color: #ff5100ec;
+}
+
+section{
+    color: white;
+}
 
 
 
