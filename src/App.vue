@@ -24,7 +24,7 @@
         <div>
           <a class="my-btn" href="#project">Project</a>
           <a class="my-btn" id="my-btn-orange" href="Cv.html" >Cv</a>
-          <a class="my-btn">About me</a>
+          <a class="my-btn" href="#aboutme">About me</a>
         </div>
       </div>  
       <div class="social-btn">
@@ -36,11 +36,15 @@
         </a>
       </div>   
     </div>
-    <section class="container mt-5" id="project">  
+    <section class="mt-5" id="project">  
       <h1 class="orange">I miei progetti:</h1>
       <Project titleType="Siti attivi:" /> 
       <!--<Project titleType="Progetti Boolean:"/>
       <Project titleType="Piccoli progetti personali:"/>-->
+    </section>
+    <section id="aboutme">
+      <h1 class="orange">About Me:</h1>
+      <AboutMe />
     </section>
   </div>  
 </template>
@@ -48,12 +52,13 @@
 <script>
 
 import Project from './components/Project.vue';
+import AboutMe from './components/AboutMe.vue';
 
 export default {
   name: 'App',
   components: {
       Project,
-    
+      AboutMe,
   }
 }
 </script>
@@ -207,7 +212,8 @@ section{
     text-align: center;
 }
 
-
-
+#project{
+  padding: 0 10%;
+}
 
 </style>
