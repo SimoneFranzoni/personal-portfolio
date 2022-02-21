@@ -1,8 +1,11 @@
 <template>
   <div class="box" :style="{ backgroundImage: `url(${item.thumb})`}">
     <div class="inner-bg">
-      <div class="mt-5 title">{{item.title}}</div>
-        <a :href="item.linkweb">Clicca qui</a>
+      <div class="title">{{item.title}}</div>
+      <div class="bg-none mt-3">
+        <a class="my-btn" :href="item.linkweb">Web</a>
+        <a class="my-btn" id="my-btn-orange" :href="item.linkweb">Code</a>
+      </div>
     </div>
   </div>
 </template>
@@ -18,8 +21,11 @@ export default {
 
 <style lang="scss" scoped>
 
+ @import '../assets/style/general.scss';
+
 .box{
-  width: 30%;
+  width: 31%;
+  margin: 1%;
   height: 300px;
   background-size: cover;
   background-position: center;
@@ -38,11 +44,10 @@ export default {
 
   .title{
     background: none;
-    font-size: 40px;
+    font-size: 30px;
   }
-  
-  a{
-    font-size: 25px;
+
+  .bg-none{
     background: none;
   }
 }

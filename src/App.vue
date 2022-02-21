@@ -11,10 +11,21 @@
       -->
       <div class="text">
         <h1 class="">I am <span>Simone</span></h1>
-        <h2 class="pb-4"> <span>Full-stack</span> Developer</h2>
-        <a class="my-btn" href="#project">Project</a>
-        <a class="my-btn" id="my-btn-orange" href="Cv.html" >Cv</a>
-        <a class="my-btn">About me</a>
+        <h2 class="pb-4 wordCarousel">
+          <span>Developer</span>
+          <div>
+            <ul class="flip3">
+              <li>Front-End</li>
+              <li>Full-Stack</li>
+              <li>Back-End</li>
+            </ul>
+          </div>
+        </h2>
+        <div>
+          <a class="my-btn" href="#project">Project</a>
+          <a class="my-btn" id="my-btn-orange" href="Cv.html" >Cv</a>
+          <a class="my-btn">About me</a>
+        </div>
       </div>  
       <div class="social-btn">
         <a href="https://www.linkedin.com/in/simone-franzoni-72850222a/" class="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
@@ -49,13 +60,8 @@ export default {
 
 <style lang="scss">
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #000000;
-}
+@import './assets/style/general.scss';
+@import './assets/style/wordcarousel.scss';
 
 header{
   width: 100%;
@@ -82,6 +88,10 @@ header{
 
 .text{
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   span{
     color: #ff5100ec;
@@ -101,39 +111,11 @@ h1{
   margin: 0%;
 }
 
-//BUTTON
-.my-btn{
-    color: white;
-    border: 1px solid white;
-    border-radius: 1px;
-    padding: 10px 20px;
-    margin: 10px;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: .4s;
-
-    &:hover{
-      background-color: white;
-      color: #272b34;
-      font-size: 20px;
-      font-weight: bold;
-    }
-}
-
-#my-btn-orange{
-  background-color: #ff5100ec;
-  border: 1px solid #ff5100ec;
-
-  &:hover{
-    background-color: white;
-    color: #272b34;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid white;
-  }
-}
-
 //social btn
+.fab{
+  background: none;
+}
+
 .social-btn{
   position: absolute;
   left: 93%;
@@ -188,8 +170,7 @@ $social-button-colors: (
     }
   }
 
-  i,
-  svg {
+  i, svg {
     position: relative;
     z-index: 1;
     transition: $social-button-transition-time;
@@ -217,14 +198,15 @@ $social-button-colors: (
 }
 //play-btn
 
-
 .orange{
     color: #ff5100ec;
 }
 
 section{
     color: white;
+    text-align: center;
 }
+
 
 
 

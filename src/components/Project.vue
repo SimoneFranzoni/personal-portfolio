@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <section>
     <h2>{{titleType}}</h2>
-    
+
     <div class="row">
     <BoxSite 
       v-for="(item, index) in Work"
@@ -9,7 +9,7 @@
       :item="item"
     />
     </div>      
-  </div>
+  </section>
 </template>
 
 <script>
@@ -37,4 +37,14 @@ export default {
 
 <style lang="scss" scoped>
 
+ @import '../assets/style/general.scss';
+
+section{
+  text-align: center;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
 </style>
