@@ -4,7 +4,7 @@
       <div class="title">{{item.title}}</div>
       <div class="bg-none mt-3">
         <a class="my-btn" :href="item.linkweb">Web</a>
-        <a class="my-btn" id="my-btn-orange" :href="item.linkweb">Code</a>
+        <a class="my-btn" id="my-btn-orange" :href="item.linkcode">Code</a>
       </div>
     </div>
   </div>

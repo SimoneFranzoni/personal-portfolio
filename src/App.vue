@@ -9,24 +9,31 @@
         <source src="./assets/video.mp4" type="video/mp4">
       </video>
       -->
-      <div class="text">
-        <h1 class="">I am <span>Simone</span></h1>
-        <h2 class="pb-4 wordCarousel">
-          <span>Developer</span>
-          <div>
-            <ul class="flip3">
-              <li>Front-End</li>
-              <li>Full-Stack</li>
-              <li>Back-End</li>
-            </ul>
-          </div>
-        </h2>
+      <div class="text d-flex flex-column justify-content-center align-items-center align-content-center">
         <div>
+          <div class="code">h1</div>
+          <h1>I am <span>Simone</span></h1>
+          <div class="code">h1</div>
+          <div class="code mb-1">h2</div>
+          <h2 class="wordCarousel">
+            <div>
+              <ul class="flip3">
+                <li>Front-End</li>
+                <li>Full-Stack</li>
+                <li>Back-End</li>
+              </ul>
+            </div>
+            <span>Developer</span>
+          </h2>
+          <div class="code">h2</div>
+        </div>
+        <div class="mt-4">
           <a class="my-btn" href="#project">Project</a>
-          <a class="my-btn" id="my-btn-orange" href="Cv.html" >Cv</a>
+          <a class="my-btn" id="my-btn-orange" href="Cv.html">Cv</a>
           <a class="my-btn" href="#aboutme">About me</a>
         </div>
       </div>  
+     
       <div class="social-btn">
         <a href="https://www.linkedin.com/in/simone-franzoni-72850222a/" class="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
           <i class="fab fa-linkedin-in"></i>
@@ -37,13 +44,17 @@
       </div>   
     </div>
     <section class="mt-5" id="project">  
+      <div class="code">h1</div>
       <h1 class="orange">I miei progetti:</h1>
+      <div class="code">h1</div>
       <Project titleType="Siti attivi:" /> 
       <!--<Project titleType="Progetti Boolean:"/>
       <Project titleType="Piccoli progetti personali:"/>-->
     </section>
     <section id="aboutme">
+      <div class="code">h1</div>
       <h1 class="orange">About Me:</h1>
+      <div class="code">h1</div>
       <AboutMe />
     </section>
   </div>  
@@ -84,29 +95,22 @@ header{
   padding: 0px;
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   color: white;
 }
 
-.text{
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.text{ 
+  padding: 200px 0 0 0;
 
   span{
     color: #ff5100ec;
   }
-
+  
+  h1{
+    font-size: 80px;
+    margin-left: 28px;
+  }
 }
 
-h1{
-  font-size: 80px;
-}
 
 #myVideo {
   right: 0;
@@ -123,7 +127,9 @@ h1{
 
 .social-btn{
   position: absolute;
-  left: 93%;
+  top: 40%;
+  left: 94%;
+  
   a{
     margin: 15px 0;
   }

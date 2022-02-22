@@ -24,7 +24,7 @@
 
     &:hover{
       background-color: white;
-      color: #272b34;
+      color: black;
       font-size: 20px;
       font-weight: bold;
       -webkit-box-shadow: 5px 12px 16px 1px #000000;
@@ -40,10 +40,24 @@
 
   &:hover{
     background-color: white;
-    color: #272b34;
+    color: black;
     font-size: 20px;
     font-weight: bold;
     border: 1px solid white;
-    
+  }
+}
+
+
+.code{
+  color: #8a8a8a;
+  font-style: italic;
+  font-size: 13px;
+
+  &::before{
+    content: '< ';
+  }
+
+  &::after{
+    content: ' >';
   }
 }
