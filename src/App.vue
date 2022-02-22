@@ -3,17 +3,18 @@
     <header class="d-flex justify-content-center">
       <img src="./assets/logo.jpeg" alt="">
     </header> 
+
     <div class="container-fluid">
-      
      <!-- <video autoplay muted loop id="myVideo" >
         <source src="./assets/video.mp4" type="video/mp4">
       </video>
       -->
+      <div class="code" id="mainopen">main</div>
       <div class="text d-flex flex-column justify-content-center align-items-center align-content-center">
         <div>
           <div class="code">h1</div>
-          <h1>I am <span>Simone</span></h1>
-          <div class="code">h1</div>
+          <h1>My name is <span class="orange">Simone</span></h1>
+          <div class="code">/ h1</div>
           <div class="code mb-1">h2</div>
           <h2 class="wordCarousel">
             <div>
@@ -23,26 +24,31 @@
                 <li>Back-End</li>
               </ul>
             </div>
-            <span>Developer</span>
+            <span class="orange">Developer</span>
           </h2>
-          <div class="code">h2</div>
+          <div class="code">/ h2</div>
+          <div class="mt-4">
+            <a class="my-btn" href="#project">Project</a>
+            <a class="my-btn" id="my-btn-orange" href="Cv.html">Cv</a>
+            <a class="my-btn" href="#aboutme">About me</a>
+          </div>
         </div>
-        <div class="mt-4">
-          <a class="my-btn" href="#project">Project</a>
-          <a class="my-btn" id="my-btn-orange" href="Cv.html">Cv</a>
-          <a class="my-btn" href="#aboutme">About me</a>
-        </div>
-      </div>  
-     
-      <div class="social-btn">
-        <a href="https://www.linkedin.com/in/simone-franzoni-72850222a/" class="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://github.com/SimoneFranzoni" class="social-buttons__button social-button social-button--github" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
+      </div>
+
+      <div class="right">
+        <div class="line"></div>     
+          <div class="social-btn">
+            <a href="https://www.linkedin.com/in/simone-franzoni-72850222a/" class="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/SimoneFranzoni" class="social-buttons__button social-button social-button--github" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        <div class="line"></div>
       </div>   
     </div>
+
     <section class="mt-5" id="project">  
       <div class="code">h1</div>
       <h1 class="orange">I miei progetti:</h1>
@@ -51,6 +57,7 @@
       <!--<Project titleType="Progetti Boolean:"/>
       <Project titleType="Piccoli progetti personali:"/>-->
     </section>
+
     <section id="aboutme">
       <div class="code">h1</div>
       <h1 class="orange">About Me:</h1>
@@ -79,12 +86,17 @@ export default {
 @import './assets/style/general.scss';
 @import './assets/style/wordcarousel.scss';
 
+
 header{
   width: 100%;
   height: 60px;
   position: fixed;
-  background-color: #ff5100ec;       
+  background-color: black;       
   z-index: 2;
+  -webkit-box-shadow: 0px 26px 32px 7px #000000;
+  -moz-box-shadow: 0px 26px 32px 7px #000000;
+  -o-box-shadow: 0px 26px 32px 7px #000000;
+    box-shadow: 0px 26px 32px 7px #000000;
 
   img{
     height: 100%;
@@ -99,18 +111,19 @@ header{
 }
 
 .text{ 
-  padding: 200px 0 0 0;
+  padding: 15% 0 0 0;
 
-  span{
-    color: #ff5100ec;
-  }
-  
   h1{
     font-size: 80px;
     margin-left: 28px;
   }
 }
 
+#mainopen{
+  position: absolute;
+  top: 14%;
+  left: 2%;
+}
 
 #myVideo {
   right: 0;
@@ -125,10 +138,18 @@ header{
   background: none;
 }
 
-.social-btn{
+.right{
   position: absolute;
-  top: 40%;
+  top: 20%;
   left: 94%;
+
+  .line{
+    margin-left: 32px;
+    width: 3px;
+    height: 150px;
+    background-color: white;
+    border-radius: 5px;
+  }
   
   a{
     margin: 15px 0;
