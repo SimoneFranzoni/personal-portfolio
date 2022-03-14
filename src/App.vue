@@ -1,82 +1,101 @@
 <template>
   <div id="app">
     <header class="d-flex justify-content-center">
-      <img src="./assets/logo.jpeg" alt="">
-    </header> 
+      <a href="#">
+        <img src="./assets/logo.jpeg" alt="">
+      </a>
+    </header>
 
-    <div class="container-fluid">
-     <!-- <video autoplay muted loop id="myVideo" >
-        <source src="./assets/video.mp4" type="video/mp4">
-      </video>
-      -->
-      <div class="code" id="mainopen">main</div>
-      <div class="text d-flex flex-column justify-content-center align-items-center align-content-center">
-        <div>
-          <div class="code">h1</div>
-          <h1>My name is <span class="orange">Simone</span></h1>
-          <div class="code">/ h1</div>
-          <div class="code mb-1">h2</div>
-          <h2 class="wordCarousel">
-            <div>
-              <ul class="flip3">
-                <li>Front-End</li>
-                <li>Full-Stack</li>
-                <li>Back-End</li>
-              </ul>
+    <main>
+      <div class="container-fluid" id="first-container">
+      <!-- <video autoplay muted loop id="myVideo" >
+          <source src="./assets/video.mp4" type="video/mp4">
+        </video>
+        -->
+        <div class="code" id="mainopen">main</div>
+        <div class="text d-flex flex-column justify-content-center align-items-center align-content-center">
+          <div>
+            <div class="code">h1</div>
+            <h1>My name is <span class="orange">Simone</span></h1>
+            <div class="code">/ h1</div>
+            <div class="code mb-1">h2</div>
+            <h2 class="wordCarousel">
+              <div>
+                <ul class="flip3">
+                  <li>Back-End</li>
+                  <li>Front-End</li>
+                  <li>Full-Stack</li>
+                </ul>
+              </div>
+              <span class="orange">Developer</span>
+            </h2>
+            <div class="code">/ h2</div>
+            <div class="mt-4">
+              <a class="my-btn" href="#project">Project</a>
+              <a class="my-btn" id="my-btn-orange" href="Cv.html">Cv</a>
+              <a class="my-btn" href="#aboutme">About me</a>
             </div>
-            <span class="orange">Developer</span>
-          </h2>
-          <div class="code">/ h2</div>
-          <div class="mt-4">
-            <a class="my-btn" href="#project">Project</a>
-            <a class="my-btn" id="my-btn-orange" href="Cv.html">Cv</a>
-            <a class="my-btn" href="#aboutme">About me</a>
           </div>
         </div>
+
+        <div class="right">
+          <div class="line"></div>     
+            <div class="social-btn">
+              <a href="https://www.linkedin.com/in/simone-franzoni-72850222a/" class="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://github.com/SimoneFranzoni" class="social-buttons__button social-button social-button--github" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          <div class="line"></div>
+        </div>   
       </div>
 
-      <div class="right">
-        <div class="line"></div>     
-          <div class="social-btn">
-            <a href="https://www.linkedin.com/in/simone-franzoni-72850222a/" class="social-buttons__button social-button social-button--linkedin" aria-label="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/SimoneFranzoni" class="social-buttons__button social-button social-button--github" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
+      <section class="workinprogress container-fluid">
+        <div class="d-flex flex-row justify-content-center align-items-center">
+          
+          <img src=".\assets\cartello.png" alt="">    
+          <div>
+            <h1>! Work in progress !</h1>
+            <div>Il sito è ancora in fase di sviluppo</div>
           </div>
-        <div class="line"></div>
-      </div>   
-    </div>
+          <img src=".\assets\cartello.png" alt="">
+        </div>
+      </section>
 
-    <section class="mt-5" id="project">  
-      <div class="code">h1</div>
-      <h1 class="orange">I miei progetti:</h1>
-      <div class="code">h1</div>
-      <Project titleType="Siti attivi:" /> 
-      <!--<Project titleType="Progetti Boolean:"/>
-      <Project titleType="Piccoli progetti personali:"/>-->
-    </section>
+      <section class="pt-5" id="project">  
+        <div class="code pb-2">section</div>
+        <div class="code">h1</div>
+        <h1 class="orange">I miei progetti:</h1>
+        <div class="code">/ h1</div>
+        <Project titleType="Siti attivi:" /> 
+        <!--<Project titleType="Progetti Boolean:"/>
+        <Project titleType="Piccoli progetti personali:"/>-->
+      </section>
 
-    <section id="aboutme">
-      <div class="code">h1</div>
-      <h1 class="orange">About Me:</h1>
-      <div class="code">h1</div>
-      <AboutMe />
-    </section>
+      <section id="aboutme">
+        
+        <div class="code">h1</div>
+        <h1 class="orange">About Me:</h1>
+        <div class="code">/ h1</div>
+        
+      </section>
+
+      
+    </main>
   </div>  
 </template>
 
 <script>
 
 import Project from './components/Project.vue';
-import AboutMe from './components/AboutMe.vue';
 
 export default {
   name: 'App',
   components: {
       Project,
-      AboutMe,
+      
   }
 }
 </script>
@@ -103,7 +122,11 @@ header{
   }
 }
 
-.container-fluid{  
+main{
+  background-color: #000000f3;
+}
+
+#first-container{  
   padding: 0px;
   width: 100%;
   height: 100vh;
@@ -241,6 +264,22 @@ section{
 
 #project{
   padding: 0 10%;
+}
+
+#aboutme{
+  padding: 0 10%;
+  
+}
+
+.workinprogress{
+  background-color: yellow;
+  padding: 30px;
+  color: black;
+
+  img{
+    width: 10%;
+    margin: 10px;
+  }
 }
 
 </style>
